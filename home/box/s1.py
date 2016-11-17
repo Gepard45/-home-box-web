@@ -9,6 +9,6 @@ while True:
         
                 data = client.recv(1024)
                 if not data: break
-                        if data == "Close" or data == "close": client.close()
+                if data == "Close" or data == "close": client.close()
         client.send(data)
 client.close()
