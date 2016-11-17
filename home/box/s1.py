@@ -6,8 +6,8 @@ s.listen(1)
 while True:                                                                     
     client, address = s.accept()
     while True:
-    data = client.recv(1024)
-    if not data: break
-    if data == "Close" or data == "close": client.close()
+      data = client.recv(1024)
+      if not data: break
+      if data == "Close" or data == "close": client.close()
     client.send(data)
 client.close()
